@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/MaterialIconsOutlined-Regular.woff2') format('woff2');
+}
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background-color: #fff;
+  width: 100%;
+  min-width: 375px;
+  min-height: 100dvh;
+  max-width: calc((540px * 2) + 24px + (48px * 2));
+  margin: 0 auto;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+  color: rgba(0, 0, 0, 0.875);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.025);
+}
+
+main > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  position: relative;
+}
+
+main > div:nth-child(1) > p {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+main > div:nth-child(1) > p:nth-child(1) {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+main > div:nth-child(1) > button {
+  background-color: rgba(0, 0, 0, 0.875);
+  padding: 8px 20px 8px 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 36px;
+  transition: all 0.25s;
+}
+
+main > div:nth-child(1) > button > span {
+  color: #fff;
+  font-size: 20px;
+}
+
+main > div:nth-child(1) > button:hover,
+main > div:nth-child(1) > button:hover > span {
+  color: rgba(255, 255, 255, 0.875);
+}
+
+main > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100% / 2, 540px), 1fr));
+  gap: 24px;
+  place-items: flex-start;
+}
+
+article {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+article > div {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+  position: relative;
+}
+
+article > div > div {
+  width: 100%;
+  display: flex;
+  column-gap: 16px;
+}
+
+article > div > div > div:nth-child(1) {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  aspect-ratio: 1/1;
+  padding: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+article > div > div > div:nth-child(1) > img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+article > div > div > div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+article > div > div > div:nth-child(2) > p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+article > div > div > div:nth-child(2) > div {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 8px;
+}
+
+article > div > div > div:nth-child(2) > div > span {
+  color: rgba(0, 0, 0, 0.625);
+  font-size: 16px !important;
+}
+
+article > div > div > div:nth-child(2) > div > p {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+article > div > p {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 4px 12px;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  border-radius: 24px;
+}
+
+article > p {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+#root {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+article.skeleton > div > p {
+  min-width: 64px;
+  min-height: 24px;
+}
+
+article.skeleton > div > div > div:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: unset;
+  border-radius: 48px;
+}
+
+article.skeleton > div > div > div:nth-child(2) > p {
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 20px;
+  border-radius: 20px;
+}
+
+article.skeleton > div > div > div:nth-child(2) > div {
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 16px;
+  border-radius: 16px;
+}
+
+article.skeleton > p {
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 120px;
+  border-radius: 8px;
+}
+
+.transparent {
+  opacity: 0 !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  main > div:nth-child(1) > button {
+    margin-top: 16px;
+    position: relative;
+    top: unset;
+    left: unset;
+    translate: unset;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  main {
+    padding: 24px;
+    row-gap: 24px;
+  }
+}
