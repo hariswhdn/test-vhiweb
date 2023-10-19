@@ -6,6 +6,7 @@ export const usersSlice = createSlice({
   initialState: {
     loading: false,
     users: [],
+    user: {},
     error: null,
   },
   reducers: {
@@ -17,6 +18,11 @@ export const usersSlice = createSlice({
       state.users = payload
       state.error = null
     },
+    setUser: (state, { payload }) => {
+      state.loading = false
+      state.user = payload
+      state.error = null
+    },
     setError: (state, { payload }) => {
       state.loading = false
       state.error = payload
@@ -24,19 +30,25 @@ export const usersSlice = createSlice({
   },
 })
 
-export const fetchUsers =
-  ({ size }) =>
-  async (dispatch) => {
-    await dispatch(setLoading(true))
-    try {
-      const response = await axios.get(
-        `https://random-data-api.com/api/v2/users?size=${size}`
-      )
-      await dispatch(setUsers(response.data))
-    } catch (error) {
-      await dispatch(setError(error.message))
-    }
+export const fetchUsers = () => async (dispatch) => {
+  await dispatch(setLoading(true))
+  try {
+    const response = await axios.get('https://reqres.in/api/users')
+    await dispatch(setUsers(response.data.data))
+  } catch (error) {
+    await dispatch(setError(error.message))
   }
+}
 
-export const { setLoading, setUsers, setError } = usersSlice.actions
+export const fetchUser = (id) => async (dispatch) => {
+  await dispatch(setLoading(true))
+  try {
+    const response = await axios.get(`https://reqres.in/api/users/${id}`)
+    await dispatch(setUser(response.data.data))
+  } catch (error) {
+    await dispatch(setError(error.message))
+  }
+}
+
+export const { setLoading, setUsers, setUser, setError } = usersSlice.actions
 export default usersSlice.reducer

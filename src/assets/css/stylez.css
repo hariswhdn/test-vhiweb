@@ -223,6 +223,11 @@ article.skeleton > p {
   opacity: 0 !important;
 }
 
+.test {
+  background-color: black;
+  color: white;
+}
+
 @media only screen and (max-width: 1199px) {
   main > div:nth-child(1) > button {
     margin-top: 16px;
