@@ -1,10 +1,46 @@
-# React + Vite
+# React Vite Redux Axios SWC Sass Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository provides a boilerplate for building web applications using React, Vite, Redux, Axios, SWC, and Sass.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- **Redux**: A predictable state container for managing the application's state.
+- **Axios**: A promise-based HTTP client for making HTTP requests.
+- **SWC**: A super-fast JavaScript/TypeScript compiler.
+- **Sass**: A mature, stable, and powerful professional-grade CSS extension language.
 
-# test-vhiweb
+## Features
+
+- Quickly start a project using this stack.
+- Optimized build and development workflow.
+- Redux setup for state management.
+- Axios for handling HTTP requests.
+- SCSS preprocessor for styling.
+
+## Usage
+
+1. Clone the repository: 
+git clone [https://github.com/hariswhdn/test-vhiweb.git](https://github.com/hariswhdn/test-vhiweb.git)
+
+2. Install dependencies:
+npm install
+
+3. Start the development server:
+npm run dev
+
+4. Build for production:
+npm run build
+
+## Contributing
+
+Contributions are welcome! Fork the repository and create a pull request for any enhancements or fixes you'd like to add.
+
+## License
+
+This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details.
+
+---
+
+Feel free to modify and expand this README according to your project specifics, licensing, and additional details or instructions you want to include.
